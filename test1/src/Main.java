@@ -33,9 +33,11 @@ class Main {
         System.out.println("attack : " + atk);
         System.out.println("lv : "+ lv);
 
-        print("\n1-1"); //game play start
+        print("\nOK Let's Move"); //game play start
+        Thread.sleep(1600);
         print("There is a zombie, let's fight!");
         zombie();
+        Thread.sleep(1200);
         zombie();
         print("You Win!");
         print("+1 xp, +5$");
@@ -63,7 +65,7 @@ class Main {
     }
     public static String village(String V) {
         print("This village is your town");
-        print("[Shop] [Dungeon] [Quest] [(update)] [(update)]");
+        print("[shop] [dungeon] [quest] [(update)] [(update)]");
         V = JOptionPane.showInputDialog("now, where we go?");
         if (V.equals("shop")) {
             Shop();
@@ -112,14 +114,18 @@ class Main {
         print("Hello, I'm Shop Keeper What Do You Want?");
         print("[(UPDATE)] [(UPDATE)] [(UPDATE)] [(UPDATE)]");
         input=JOptionPane.showInputDialog("select Stuff");
+        print("(UPDATE)");
+        village("");
         return null;
     }
     public static String dungeon() {
         print("(UPDATE)");
+        village("");
         return null;
     }
     public static String quest() {
         print("(UPDATE)");
+        village("");
         return null;
     }
 }
